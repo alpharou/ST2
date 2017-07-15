@@ -29,7 +29,7 @@ A web based JavaScript Sketch with p5.js libraries (https://p5js.org/) that prov
 
 - REINITIALIZE reboots the Script without reloading the page.
 
-#LICENSE
+# LICENSE
 
 This work is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License as stated here https://alpharou.github.io/ST2/CCLicense/.
 To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-sa/4.0/.
