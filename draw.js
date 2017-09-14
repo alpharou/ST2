@@ -33,6 +33,11 @@ function draw() {
 
     };
 
+    //Line that closes the loop when set that way in getLoop.
+    if (getLoop) {
+      line(cities[0].x, cities[0].y, cities[cities.length-1].x, cities[cities.length-1].y);
+    };
+
   };
 
   for (var i = 0; i < cities.length; i++) {

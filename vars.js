@@ -13,6 +13,8 @@ var calcDistB;
 var salesmanTackleOnceB;
 var salesmanTackleB;
 var tackleWorking = false;
+let getLoopB;
+let getLoop = true;
 
 //setup vars
 var numberOfCities = 10;

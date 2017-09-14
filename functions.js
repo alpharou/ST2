@@ -324,6 +324,11 @@ function sumPathXY(arr) {
 
     };
 
+    //Add the distance to close the loop when set that way in getLoop.
+    if (getLoop) {
+      distPath = distPath + sqrt(pow(arr[0] - arr[arr.length-2], 2) + pow(arr[1] - arr[arr.length-1], 2))
+    };
+    
   };
 
   return distPath;

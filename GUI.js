@@ -24,6 +24,9 @@ function GUI(mode) {
     populateB = createButton("POPULATE");
     populateB.mousePressed(populateCities);
 
+    getLoopB = createButton("LOOP");
+    getLoopB.mousePressed(toggleLineLoop);
+
     resetB = createButton("REINITIALIZE");
     resetB.mousePressed(setup);
 
@@ -64,6 +67,9 @@ function GUI(mode) {
 
       //Reset Button.
       resetB.position(screenScale.val*10, height - screenScale.val*30);
+
+      //GetLoop Reactive Button.
+      getLoopB.position(screenScale.val*10, height - screenScale.val*30 - 48);
 
       //Sort cities[] button.
       calcDistB.position(screenScale.val*10, screenScale.val*10 + 48);
