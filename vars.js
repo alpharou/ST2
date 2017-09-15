@@ -17,7 +17,7 @@ let getLoopB;
 let getLoop = true;
 
 //setup vars
-var numberOfCities = 10;
+var numberOfCities = 25;
 var cities = [];
 var citiesXY = [];
 var citiesXYBest = [];

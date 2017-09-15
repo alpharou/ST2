@@ -52,10 +52,8 @@ function GUI(mode) {
       inputCitiesI.size(screenScale.val*30+10);
       inputCitiesI.position(screenScale.val*10, screenScale.val*10);
 
-
       //Button for calculate AvgCity.
       findAvgB.position(screenScale.val*10, screenScale.val*10 + 24);
-
 
       //Button for Mouse toggle.
       toggleDMCB.position(screenScale.val*10, height - screenScale.val*30 - 24);
@@ -69,11 +67,10 @@ function GUI(mode) {
       resetB.position(screenScale.val*10, height - screenScale.val*30);
 
       //GetLoop Reactive Button.
-      getLoopB.position(screenScale.val*10, height - screenScale.val*30 - 48);
+      getLoopB.position(screenScale.val*10, screenScale.val*10 + 120);
 
       //Sort cities[] button.
       calcDistB.position(screenScale.val*10, screenScale.val*10 + 48);
-
 
       //Calculate tackle once. Salesman's tackle v2.
       salesmanTackleOnceB.position(screenScale.val*10, screenScale.val*10 + 72);

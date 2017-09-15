@@ -1,15 +1,17 @@
 # ST2 (Salesman's Tackle v2) https://alpharou.github.io/ST2/
-A web based JavaScript Sketch with p5.js libraries (https://p5js.org/) that provides an example of the Salesman's Tackle v2 Algorithm.
+A web based JavaScript Script that provides an example of the Salesman's Tackle v2 Algorithm.
+
+Using p5.js libraries (https://p5js.org/)
 
 # USAGE
 
 --> GENERATE THE POINTS:
 
-- Set the number of points to generate by setting the number in the first input field. It accepts round numbers like (0, 1, 45...). If a negative number is detected, it'll be replaced by it's positive counterpart.
+- Set the number of points to generate by entering a natural number in the first input field. It accepts concrete numbers like (0, 1, 45...). Negative figures will be replaced by it's positive counterpart.
 
-- To generate the points there are two methods available.
-  POPULATE just creates random points from vector values.
-  POPULATE EVENLY tries to spread the points across the boundaries in a uniform fashion implementing an increase in tolerance every iteration. (Simplified poorly self-written version of Poisson-disc Sampling).
+- To generate the points there are two methods available:
+  POPULATE creates n points from random two-dimensional vector values.
+  POPULATE EVENLY tries to spread the n points across the workspace in a uniform fashion increasing the tolerance in every unsuccessful iteration. (Simplified, poorly written adapted concept of Poisson-disc Sampling).
 
 --> MANIPULATE THE CONNECTIONS:
 
@@ -19,15 +21,17 @@ A web based JavaScript Sketch with p5.js libraries (https://p5js.org/) that prov
 
 --> APPLYING THE ALGORITHM:
 
-- TACKLE ONCE applies one iteration of the algorithm. It's initial order dependent, so it's not 100% reliable, and it's a matter of luck for it to find the best solution.
+- TACKLE ONCE applies one iteration of the ST2 algorithm. It's order of input dependent, so it's not 100% reliable, and it's a matter of luck for it to find the best solution from the pseudo-random input order implemented. It'll however find plausible candidates very often.
 
-- TACKLE integrates loop nests trying to find the best solution amongst all the individual iterations. Again, it's not 100% reliable given the variability dependency of the prior state, but it tends to find paths around the 93% accuracy mark in two or three full calculations. IT CAN BE REAPPLIED, AS IT WILL TRY TO REDUCE THE ALREADY DISPLAYED SOLUTION.
+- TACKLE integrates loop nests that try to find the best solution amongst all the individual tackle iterations. Again, it's not 100% reliable given the variability dependency of the prior state, but it tends to find paths around the 90% (vague figure) accuracy mark in sqrt(n) single algorithm executions. It can be reapplied, and it'll try to find a better solution.
+
+- LOOP/LINE toggles between closed and open connections, LOOP meaning that it'll have into account the final connection from the last to the fist point. LINE will try to find the best point to start and end the connections. LOOP is less expensive in term of computing time since its nature doesn't require to find fitting START/END point combinations.
 
 --> MISC:
 
 - COORDS shows the 2D Cartesian coordinates of the current position of the mouse.
 
-- REINITIALIZE reboots the Script without reloading the page.
+- REINITIALIZE reboots the Script and resets values without having to reloading the page.
 
 # LICENSE
 
