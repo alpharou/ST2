@@ -319,16 +319,18 @@ function sumPathXY(arr) {
       distPath = distPath + sqrt(
         pow(arr[i*2] - arr[(i+1)*2], 2)
         + pow(arr[i*2+1] - arr[(i+1)*2+1], 2)
-
       );
 
     };
 
     //Add the distance to close the loop when set that way in getLoop.
     if (getLoop) {
-      distPath = distPath + sqrt(pow(arr[0] - arr[arr.length-2], 2) + pow(arr[1] - arr[arr.length-1], 2))
+      distPath = distPath + sqrt(
+        pow(arr[0] - arr[arr.length-2], 2)
+        + pow(arr[1] - arr[arr.length-1], 2)
+      );
     };
-    
+
   };
 
   return distPath;
@@ -402,7 +404,7 @@ function salesmanTackleOnce() {
 //Load the algorithm to make some visual changes happen.
 function salesmanTackleLoad() {
 
-  //Only load if there's something to do.
+  //Only load if there isn't anything working already.
   if (tackleWorking == false && cities.length != 0) {
 
     tackleWorking = true;
